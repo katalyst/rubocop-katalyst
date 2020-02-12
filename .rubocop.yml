@@ -1,0 +1,10 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+  - rubocop-rails
+
+inherit_from:
+  - ./config/default.yml
+
+Rails:
+  Enabled: false
