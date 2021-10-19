@@ -1,0 +1,13 @@
+inherit_from:
+  - config/default.yml
+
+Metrics/BlockLength:
+  Exclude:
+    - rubocop-katalyst.gemspec
+
+Rails:
+  Enabled: false
+
+Rails/RakeEnvironment:
+  Exclude:
+    - Rakefile

@@ -1,0 +1,44 @@
+# Configuration for all cops and global extension configuration
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rake
+  - rubocop-rspec
+
+inherit_mode:
+  merge:
+    - Exclude
+
+inherit_from:
+  - "./rubocop-bundler.yml"
+  - "./rubocop-gemspec.yml"
+  - "./rubocop-layout.yml"
+  - "./rubocop-lint.yml"
+  - "./rubocop-metrics.yml"
+  - "./rubocop-naming.yml"
+  - "./rubocop-performance.yml"
+  - "./rubocop-rails.yml"
+  - "./rubocop-rspec.yml"
+  - "./rubocop-security.yml"
+  - "./rubocop-style.yml"
+
+AllCops:
+  Exclude:
+    - ".git/**/*"
+    - "node_modules/**/*"
+    - Dockerfile
+    - docker-compose.yml
+  NewCops: disable # review new cops for styleguide before including
+  TargetRubyVersion: 2.7
+
+Performance:
+  Enabled: true
+
+Rails:
+  Enabled: true
+
+Rake:
+  Enabled: true
+
+RSpec:
+  Enabled: true

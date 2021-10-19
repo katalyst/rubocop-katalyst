@@ -1,0 +1,45 @@
+# Metrics configuration overrides
+# https://docs.rubocop.org/rubocop/1.5/cops_metrics.html
+
+Metrics/BlockNesting:
+  Description: 'Avoid excessive block nesting'
+  StyleGuide: 'https://github.com/rubocop/ruby-style-guide#three-is-the-number-thou-shalt-count'
+  Enabled: false
+
+Metrics/ClassLength:
+  Description: 'Avoid classes longer than 100 lines of code.'
+  Enabled: false
+
+Metrics/ModuleLength:
+  Description: 'Avoid modules longer than 100 lines of code.'
+  Enabled: false
+
+Metrics/AbcSize:
+  Description: >-
+    A calculated magnitude based on number of assignments,
+    branches, and conditions.
+  Enabled: false
+
+Metrics/BlockLength:
+  CountComments: true  # count full line comments?
+  Max: 25
+  IgnoredMethods: []
+  Exclude:
+    - "config/environments/*" # rails environment configuration
+    - "spec/**/*"
+
+Metrics/CyclomaticComplexity:
+  Description: >-
+    A complexity metric that is strongly correlated to the number
+    of test cases needed to validate a method.
+  Enabled: false
+
+Metrics/MethodLength:
+  Description: 'Avoid methods longer than 10 lines of code.'
+  StyleGuide: 'https://github.com/rubocop/ruby-style-guide#short-methods'
+  Enabled: false
+
+Metrics/ParameterLists:
+  Description: 'Avoid parameter lists longer than three or four parameters.'
+  StyleGuide: 'https://github.com/rubocop/ruby-style-guide#too-many-params'
+  Enabled: false

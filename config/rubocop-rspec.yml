@@ -1,0 +1,6 @@
+# RuboCop RSpec extension configuration overrides
+# https://github.com/rubocop/rubocop-rspec
+
+RSpec/ExampleLength:
+  Exclude:
+    - spec/features/*

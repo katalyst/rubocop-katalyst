@@ -1,0 +1,51 @@
+# Layout configuration overrides
+# https://docs.rubocop.org/rubocop/1.5/cops_layout.html
+
+Layout/ConditionPosition:
+  Description: >-
+    Checks for condition placed in a confusing position relative to
+    the keyword.
+  StyleGuide: 'https://github.com/rubocop/ruby-style-guide#same-line-condition'
+  Enabled: false
+
+Layout/DotPosition:
+  Description: 'Checks the position of the dot in multi-line method calls.'
+  EnforcedStyle: leading
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: true
+
+Layout/ExtraSpacing:
+  Description: 'Do not use unnecessary spacing.'
+  Enabled: true
+
+Layout/InitialIndentation:
+  Description: >-
+    Checks the indentation of the first non-blank non-comment line in a file.
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Layout/MultilineMethodCallIndentation:
+  Description: >-
+    Checks indentation of method calls with the dot operator
+    that span more than one line.
+  Enabled: true
+  EnforcedStyle: indented_relative_to_receiver
+
+Layout/MultilineOperationIndentation:
+  Description: >-
+    Checks indentation of binary operations that span more than
+    one line.
+  Enabled: true
+  EnforcedStyle: indented
+
+Layout/ParameterAlignment:
+  Description: 'Here we check if the parameters on a multi-line method call or definition are aligned.'
+  StyleGuide: 'https://github.com/rubocop/ruby-style-guide#no-double-indent'
+  Enabled: false
+
+Layout/HashAlignment:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
