@@ -42,7 +42,7 @@ Style/ClassVars:
   Enabled: false
 
 Style/CollectionMethods:
-  Enabled: true
+  Enabled: false
   PreferredMethods:
     find: detect
     inject: reduce
