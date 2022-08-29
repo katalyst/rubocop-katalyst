@@ -3,4 +3,5 @@
 
 RSpec/ExampleLength:
   Exclude:
-    - spec/features/*
+    - spec/features/**/*
+    - spec/system/**/*
