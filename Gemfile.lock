@@ -77,14 +77,14 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
-  rake (~> 13.0)
-  rspec (~> 3.0)
-  rubocop (~> 1.7)
+  rake
+  rspec
+  rubocop
   rubocop-katalyst!
-  rubocop-performance (~> 1.11)
-  rubocop-rails (~> 2.12)
-  rubocop-rake (~> 0.6.0)
-  rubocop-rspec (~> 2.5)
+  rubocop-performance
+  rubocop-rails
+  rubocop-rake
+  rubocop-rspec
 
 BUNDLED WITH
    2.3.21
