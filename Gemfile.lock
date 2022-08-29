@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-katalyst (1.0.0)
+    rubocop-katalyst (1.0.1)
       rubocop
       rubocop-performance
       rubocop-rails

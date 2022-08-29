@@ -1,3 +1,7 @@
+## [1.0.1] - 2022-08-30
+
+- disabling Style/CollectionMethods as it causes an error with autocorrection
+
 ## [1.0.0] - 2022-08-29
 
 - Bump dependency versions
