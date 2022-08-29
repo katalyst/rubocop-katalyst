@@ -1,3 +1,9 @@
+## [1.0.0] - 2022-08-29
+
+- Bump dependency versions
+- Compatibility with rubocop 1.35.1
+- Relax example length rule for feature and system specs
+
 ## [0.1.1] - 2021-11-15
 
 - Bump dependency versions

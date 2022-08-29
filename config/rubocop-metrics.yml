@@ -23,7 +23,6 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   CountComments: true  # count full line comments?
   Max: 25
-  IgnoredMethods: []
   Exclude:
     - "config/environments/*" # rails environment configuration
     - "spec/**/*"
