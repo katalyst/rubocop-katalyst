@@ -1,3 +1,7 @@
+## [1.0.2] - 2022-09-02
+
+- ignore multiple expectations in features and system specs
+
 ## [1.0.1] - 2022-08-30
 
 - disabling Style/CollectionMethods as it causes an error with autocorrection

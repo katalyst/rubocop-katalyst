@@ -5,3 +5,8 @@ RSpec/ExampleLength:
   Exclude:
     - spec/features/**/*
     - spec/system/**/*
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - spec/features/**/*
+    - spec/system/**/*
