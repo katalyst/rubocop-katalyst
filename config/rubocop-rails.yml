@@ -7,9 +7,6 @@ AllCops:
     - db/schema.rb
     - vendor/bundle/**/*
 
-Rails:
-  TargetRailsVersion: ">= 6.0"
-
 Rails/ActionFilter:
   Description: 'Enforces consistent use of action filter methods.'
   Enabled: false
