@@ -1,6 +1,12 @@
 # Layout configuration overrides
 # https://docs.rubocop.org/rubocop/1.5/cops_layout.html
 
+Layout/BeginEndAlignment:
+  Description: >-
+    Checks whether the end keyword of begin is aligned properly.
+  Enabled: true
+  EnforcedStyleAlignWith: begin
+
 Layout/ConditionPosition:
   Description: >-
     Checks for condition placed in a confusing position relative to
