@@ -1,6 +1,17 @@
 # RuboCop RSpec extension configuration overrides
 # https://github.com/rubocop/rubocop-rspec
 
+RSpec/ContextWording:
+  Description: >-
+    Checks that context docstring starts with an allowed prefix.
+  Prefixes:
+    - after
+    - as
+    - "on"
+    - when
+    - with
+    - without
+
 RSpec/ExampleLength:
   Exclude:
     - spec/features/**/*
