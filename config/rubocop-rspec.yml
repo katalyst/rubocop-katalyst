@@ -21,3 +21,7 @@ RSpec/MultipleExpectations:
   Exclude:
     - spec/features/**/*
     - spec/system/**/*
+
+RSpec/RepeatedExample:
+  Exclude:
+    - spec/policies/**/*
