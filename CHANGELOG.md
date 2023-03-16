@@ -1,3 +1,8 @@
+## [1.0.5] - 2023-03-16
+
+- Add extra prefixes for spec contexts
+- Allow repeated examples in policy specs
+
 ## [1.0.2] - 2022-09-02
 
 - ignore multiple expectations in features and system specs
@@ -22,4 +27,3 @@
 - Initial release
 - Disable new cops by default
 - Enforce styles within the project
-
