@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"]   = "#{spec.homepage}/blob/main/CHANGELOG.md"
 
-  spec.files = Dir["{config,lib}/**/*", "CHANGELOG.md", "LICENSE.txt", "README.md"]
+  spec.files = Dir["{config,lib}/**/*", "CHANGELOG.md", "LICENSE.txt", "README.md", ".erb-lint.yml", "package.json"]
   spec.require_paths = ["lib"]
   spec.metadata["rubygems_mfa_required"] = "true"
 

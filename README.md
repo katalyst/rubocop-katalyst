@@ -9,7 +9,8 @@ Cops are broken down by department; a file corresponding to each department can 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rubocop-katalyst', require: false
+gem "rubocop-katalyst", require: false
+gem "erb_lint", require: false # optional dependency
 ```
 
 And then execute:
@@ -27,6 +28,22 @@ Add the following to your `.rubocop.yml` file:
 ```yml
 require:
   - rubocop-katalyst
+```
+
+You can integrate this gem with Rake by adding the following to your `Rakefile`:
+
+```ruby
+require "rubocop/katalyst/rake_task"
+RuboCop::Katalyst::RakeTask.new
+
+require "rubocop/katalyst/erb_lint_task"
+RuboCop::Katalyst::ErbLintTask.new
+
+require "rubocop/katalyst/prettier_task"
+RuboCop::Katalyst::PrettierTask.new
+
+desc "Run lint before running RSpec"
+task spec: :lint
 ```
 
 That's it. You're all set to use Katalyst's base code styles. Override what you need in your `.rubocop.yml` file as the project demands.

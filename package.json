@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "lint": "prettier --check *.json app/assets/javascripts app/assets/stylesheets",
+    "autocorrect": "prettier --write *.json app/assets/javascripts app/assets/stylesheets"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
+}

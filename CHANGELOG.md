@@ -1,3 +1,8 @@
+## [1.1.0] - 2023-05-19
+
+- Add erb_lint rake task and config (optional dependency)
+- Add prettier rake task and config (assumes yarn)
+
 ## [1.0.5] - 2023-03-16
 
 - Add extra prefixes for spec contexts
