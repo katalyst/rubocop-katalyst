@@ -52,13 +52,13 @@ module RuboCop
       end
 
       def config
-        config = Pathname.new(".erb-lint.yml")
+        config = ::Rails.application.root.join(".erb-lint.yml")
         config = default_config unless config.exist?
         config
       end
 
       def default_config
-        Pathname.new(__dir__).join("../../.erb-lint.yml")
+        Pathname.new(__dir__).join("../../../.erb-lint.yml")
       end
     end
   end
