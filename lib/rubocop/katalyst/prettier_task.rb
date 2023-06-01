@@ -42,7 +42,7 @@ module RuboCop
 
       def install_prettier
         yarn("add", "--dev", "prettier")
-        config.open("w") do |f|
+        File.open(config, "w") do |f|
           f.write <<~JSON
             {}
           JSON
