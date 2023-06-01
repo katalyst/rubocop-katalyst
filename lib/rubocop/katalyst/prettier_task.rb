@@ -71,9 +71,12 @@ module RuboCop
 
       def paths
         %w[
+          app/assets/config
           app/assets/javascripts
           app/assets/stylesheets
-        ]
+          app/javascript
+          app/packs
+        ].select { |path| ::Rails.application.root.join(path).exist? }
       end
     end
   end
