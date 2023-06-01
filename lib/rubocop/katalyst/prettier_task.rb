@@ -33,11 +33,11 @@ module RuboCop
       end
 
       def installed?
-        config.exist?
+        File.exist?(config)
       end
 
       def config
-        ::Rails.application.root.join(".prettierrc.json")
+        File.join(root, ".prettierrc.json")
       end
 
       def install_prettier
@@ -76,7 +76,12 @@ module RuboCop
           app/assets/stylesheets
           app/javascript
           app/packs
-        ].select { |path| ::Rails.application.root.join(path).exist? }
+        ].map { |path| File.join(root, path) }
+          .select { |path| File.exist?(path) }
+      end
+
+      def root
+        @root ||= Dir.pwd
       end
     end
   end
