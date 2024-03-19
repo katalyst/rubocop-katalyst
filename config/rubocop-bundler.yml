@@ -1,2 +1,5 @@
 # Bundler configuration overrides
 # https://docs.rubocop.org/rubocop/1.5/cops_bundler.html
+
+Bundler/OrderedGems:
+  Enabled: true

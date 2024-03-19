@@ -59,6 +59,7 @@ Rails/UnknownEnv:
     - staging
     - development
     - test
+  Enabled: true
 
 Rails/Validation:
   Description: 'Use validates :attribute, hash of validations.'
