@@ -24,12 +24,11 @@ inherit_from:
 
 AllCops:
   Exclude:
-    - ".git/**/*"
-    - "node_modules/**/*"
-    - Dockerfile
-    - docker-compose.yml
+    - .git/**/*
+    - node_modules/**/*
+    - vendor/bundle/**/*
   NewCops: disable # review new cops for styleguide before including
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.3
 
 Performance:
   Enabled: true

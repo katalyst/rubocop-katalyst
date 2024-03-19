@@ -8,7 +8,6 @@ require "rubocop-rspec"
 
 require_relative "rubocop/katalyst"
 require_relative "rubocop/katalyst/inject"
-require_relative "rubocop/katalyst/version"
 
 RuboCop::Katalyst::Inject.defaults!
 

@@ -22,6 +22,9 @@ RSpec/MultipleExpectations:
     - spec/features/**/*
     - spec/system/**/*
 
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
 RSpec/RepeatedExample:
   Exclude:
     - spec/policies/**/*
