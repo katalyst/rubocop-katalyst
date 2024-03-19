@@ -53,6 +53,13 @@ Rails/TimeZone:
   Reference: 'https://danilenko.org/2012/7/6/rails_timezones'
   Enabled: false
 
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - staging
+    - development
+    - test
+
 Rails/Validation:
   Description: 'Use validates :attribute, hash of validations.'
   Enabled: false
