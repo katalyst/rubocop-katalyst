@@ -1,3 +1,9 @@
+## [2.0.0] - 2024-06-12
+
+- Update ruby syntax to 3.3
+- Update rubocop-rails to 3.0
+- See rubocop-rails upgrade notes for more details
+
 ## [1.1.0] - 2023-05-19
 
 - Add erb_lint rake task and config (optional dependency)
