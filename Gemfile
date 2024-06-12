@@ -5,7 +5,5 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in rubocop-katalyst.gemspec
 gemspec
 
-group :development, :test do
-  gem "rake"
-  gem "rspec"
-end
+gem "rake"
+gem "rspec"
