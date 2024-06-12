@@ -1,9 +1,12 @@
 # Configuration for all cops and global extension configuration
 require:
+  - rubocop-capybara
+  - rubocop-factory_bot
   - rubocop-performance
   - rubocop-rails
   - rubocop-rake
   - rubocop-rspec
+  - rubocop-rspec_rails
 
 inherit_mode:
   merge:
@@ -27,8 +30,14 @@ AllCops:
     - .git/**/*
     - node_modules/**/*
     - vendor/bundle/**/*
-  NewCops: disable # review new cops for styleguide before including
+  NewCops: enable
   TargetRubyVersion: 3.3
+
+Capybara:
+  Enabled: true
+
+FactoryBot:
+  Enabled: true
 
 Performance:
   Enabled: true
@@ -40,4 +49,7 @@ Rake:
   Enabled: true
 
 RSpec:
+  Enabled: true
+
+RSpecRails:
   Enabled: true

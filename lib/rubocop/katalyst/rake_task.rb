@@ -11,7 +11,7 @@ module RuboCop
     class RakeTask < ::RuboCop::RakeTask
       attr_accessor :verbose
 
-      def initialize(name = :rubocop, *args, &task_block)
+      def initialize(name = :rubocop, *, &)
         super
 
         task(lint: :rubocop)

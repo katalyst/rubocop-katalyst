@@ -9,7 +9,10 @@ require "rubocop/rake_task"
 
 RuboCop::RakeTask.new
 
-task default: %i[spec rubocop]
+require "rubocop/katalyst/rake_task"
+RuboCop::Katalyst::RakeTask.new
+
+task default: :lint
 
 RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList["spec/**/*_spec.rb"]
