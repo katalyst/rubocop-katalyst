@@ -5,6 +5,6 @@
     "autocorrect": "prettier --write *.json app/assets/javascripts app/assets/stylesheets"
   },
   "devDependencies": {
-    "prettier": "2.7.1"
+    "prettier": "3.3.2"
   }
 }
