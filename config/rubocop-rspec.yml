@@ -13,6 +13,7 @@ RSpec/ContextWording:
     - without
 
 RSpec/ExampleLength:
+  CountAsOne: ["array", "heredoc", "method_call"]
   Exclude:
     - spec/features/**/*
     - spec/system/**/*
