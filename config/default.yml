@@ -29,7 +29,8 @@ AllCops:
   Exclude:
     - .git/**/*
     - node_modules/**/*
-    - vendor/bundle/**/*
+    - tmp/**/*
+    - vendor/**/*
   NewCops: enable
   TargetRubyVersion: 3.3
 
