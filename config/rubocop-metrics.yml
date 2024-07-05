@@ -21,10 +21,12 @@ Metrics/AbcSize:
   Enabled: false
 
 Metrics/BlockLength:
-  CountComments: true  # count full line comments?
+  CountComments: false  # count full line comments?
   Max: 25
   Exclude:
     - "config/environments/*" # rails environment configuration
+    - "config/routes.rb"
+    - "config/routes/*"
     - "spec/**/*"
 
 Metrics/CyclomaticComplexity:
