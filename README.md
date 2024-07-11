@@ -28,6 +28,10 @@ Add the following to your `.rubocop.yml` file:
 ```yml
 require:
   - rubocop-katalyst
+
+inherit_mode:
+  merge:
+    - Exclude
 ```
 
 You can integrate this gem with Rake by adding the following to your `Rakefile`:
