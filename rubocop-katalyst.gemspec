@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name    = "rubocop-katalyst"
-  s.version = "2.0.2"
+  s.version = "2.0.3"
   s.authors = ["Katalyst Interactive"]
   s.email   = ["developers@katalyst.com.au"]
 

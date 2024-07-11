@@ -8,9 +8,7 @@ module RuboCop
     # bit of our configuration.
     module Inject
       def self.defaults!
-        project_root = Pathname.new(__dir__).parent.parent.parent.expand_path
-        config_default = project_root.join("config", "default.yml")
-        path = config_default.to_s
+        path = CONFIG_DEFAULT.to_s
         hash = ConfigLoader.send(:load_file, File.new(path))
         config = RuboCop::Config.new(hash, path)
         puts "configuration from #{path}" if ConfigLoader.debug?
