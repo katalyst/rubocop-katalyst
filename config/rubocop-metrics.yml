@@ -23,6 +23,7 @@ Metrics/AbcSize:
 Metrics/BlockLength:
   CountComments: false  # count full line comments?
   Max: 25
+  AllowedMethods: [ refine, class_methods, extended, included ]
   Exclude:
     - "config/environments/*" # rails environment configuration
     - "config/routes.rb"
