@@ -41,12 +41,12 @@ GEM
     parser (3.3.4.0)
       ast (~> 2.4.1)
       racc
-    racc (1.8.0)
+    racc (1.8.1)
     rack (3.1.7)
     rainbow (3.1.1)
     rake (13.2.1)
     regexp_parser (2.9.2)
-    rexml (3.3.1)
+    rexml (3.3.2)
       strscan
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -88,7 +88,7 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (3.0.2)
+    rubocop-rspec (3.0.3)
       rubocop (~> 1.61)
     rubocop-rspec_rails (2.30.0)
       rubocop (~> 1.61)
@@ -112,4 +112,4 @@ DEPENDENCIES
   rubocop-katalyst!
 
 BUNDLED WITH
-   2.5.15
+   2.5.16
