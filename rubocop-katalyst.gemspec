@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name    = "rubocop-katalyst"
-  s.version = "2.0.5"
+  s.version = "2.1.0"
   s.authors = ["Katalyst Interactive"]
   s.email   = ["developers@katalyst.com.au"]
 
@@ -30,4 +30,8 @@ Gem::Specification.new do |s|
   s.add_dependency "rubocop-rake"
   s.add_dependency "rubocop-rspec"
   s.add_dependency "rubocop-rspec_rails"
+
+  # Undeclared dependency of erb_lint, used to be required by rubocop
+  # This can be removed again once https://github.com/Shopify/erb_lint/issues/371 is resolved
+  s.add_dependency "rexml"
 end
