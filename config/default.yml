@@ -1,5 +1,6 @@
 # Configuration for all cops and global extension configuration
 plugins:
+  - rubocop-factory_bot
   - rubocop-performance
   - rubocop-rails
   - rubocop-rake
@@ -7,7 +8,6 @@ plugins:
 
 require:
   - rubocop-capybara
-  - rubocop-factory_bot
   - rubocop-rspec_rails
 
 inherit_mode:
