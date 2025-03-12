@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name    = "rubocop-katalyst"
-  s.version = "2.1.2"
+  s.version = "2.2.0"
   s.authors = ["Katalyst Interactive"]
   s.email   = ["developers@katalyst.com.au"]
 
@@ -21,6 +21,10 @@ Gem::Specification.new do |s|
 
   s.metadata["allowed_push_host"] = "https://rubygems.org"
   s.metadata["rubygems_mfa_required"] = "true"
+
+  s.metadata["default_lint_roller_plugin"] = "RuboCop::Katalyst::Plugin"
+
+  s.add_dependency "lint_roller"
 
   s.add_dependency "rubocop"
   s.add_dependency "rubocop-capybara"

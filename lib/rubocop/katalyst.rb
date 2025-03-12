@@ -6,17 +6,39 @@ require "rubocop-rails"
 require "rubocop-rake"
 require "rubocop-rspec"
 
-require_relative "katalyst/inject"
-
 module RuboCop
   module Katalyst
-    class Error < StandardError; end
-    PROJECT_ROOT   = Pathname.new(__dir__).parent.parent.expand_path.freeze
-    CONFIG_DEFAULT = PROJECT_ROOT.join("config", "default.yml").freeze
-    CONFIG         = YAML.safe_load(CONFIG_DEFAULT.read).freeze
+    class Plugin < LintRoller::Plugin
+      def about
+        LintRoller::About.new(
+          name:        "rubocop-katalyst",
+          version:,
+          homepage:    "https://github.com/katalyst/rubocop-katalyst",
+          description: "Rubocop configuration for Katalyst projects.",
+        )
+      end
 
-    private_constant(:CONFIG_DEFAULT, :PROJECT_ROOT)
+      def supported?(context)
+        context.engine == :rubocop
+      end
+
+      def rules(_context)
+        LintRoller::Rules.new(
+          type:          :path,
+          config_format: :rubocop,
+          value:         Pathname.new(__dir__).join("../../config/default.yml"),
+        )
+      end
+
+      private
+
+      def version
+        Gem::Specification.find_by_name("rubocop-katalyst").version
+      end
+
+      def project_root
+        Pathname.new(__dir__).join("../..")
+      end
+    end
   end
 end
-
-RuboCop::Katalyst::Inject.defaults!

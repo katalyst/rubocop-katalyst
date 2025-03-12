@@ -1,13 +1,11 @@
 # Configuration for all cops and global extension configuration
 plugins:
+  - rubocop-capybara
   - rubocop-factory_bot
   - rubocop-performance
   - rubocop-rails
   - rubocop-rake
   - rubocop-rspec
-
-require:
-  - rubocop-capybara
   - rubocop-rspec_rails
 
 inherit_mode:
