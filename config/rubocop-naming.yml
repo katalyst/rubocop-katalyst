@@ -20,9 +20,9 @@ Naming/FileName:
   StyleGuide: 'https://github.com/rubocop/ruby-style-guide#snake-case-files'
   Enabled: false
 
-Naming/PredicateName:
-  Description: 'Check the names of predicate methods.'
-  StyleGuide: 'https://github.com/rubocop/ruby-style-guide#bool-methods-qmark'
+Naming/PredicatePrefix:
+  Description: 'Check the prefix of predicate methods.'
+  StyleGuide: 'https://github.com/rubocop/ruby-style-guide#predicate-methods-prefix'
   ForbiddenPrefixes:
     - is_
   Exclude:
