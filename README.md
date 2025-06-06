@@ -26,7 +26,7 @@ Or install it yourself as:
 Add the following to your `.rubocop.yml` file:
 
 ```yml
-require:
+plugins:
   - rubocop-katalyst
 
 inherit_mode:
