@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
                         "CHANGELOG.md",
                         "LICENSE.txt",
                         "README.md",
-                        ".erb-lint.yml",
+                        ".erb_lint.yml",
                         "package.json"]
   s.require_paths = ["lib"]
 

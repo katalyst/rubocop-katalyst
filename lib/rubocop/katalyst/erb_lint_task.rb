@@ -53,13 +53,18 @@ module RuboCop
       end
 
       def config
-        config = Pathname.new(root).join(".erb-lint.yml")
+        config = Pathname.new(root).join(".erb_lint.yml")
+        config = legacy_config unless config.exist?
         config = default_config unless config.exist?
         config
       end
 
+      def legacy_config
+        Pathname.new(root).join(".erb-lint.yml")
+      end
+
       def default_config
-        Pathname.new(__dir__).join("../../../.erb-lint.yml")
+        Pathname.new(__dir__).join("../../../.erb_lint.yml")
       end
 
       def root

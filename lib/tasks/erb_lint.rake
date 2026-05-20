@@ -7,11 +7,14 @@ rescue LoadError
 end
 
 def erb_lint_config
-  local = Rails.application.root.join(".erb-lint.yml")
+  local  = Rails.application.root.join(".erb_lint.yml")
+  legacy = Rails.application.root.join(".erb-lint.yml")
   if local.exist?
     local.to_path
+  elsif legacy.exist?
+    legacy.to_path
   else
-    Pathname.new(__dir__).join("../../.erb-lint.yml").to_path
+    Pathname.new(__dir__).join("../../.erb_lint.yml").to_path
   end
 end
 
