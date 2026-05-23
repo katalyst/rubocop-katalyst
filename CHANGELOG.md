@@ -1,3 +1,8 @@
+## [3.0.0] - 2026-05-21
+
+- Update Ruby minimum version and syntax to 4.0
+- Enable ForceEqualSignAlignment
+
 ## [2.0.0] - 2024-06-12
 
 - Update ruby syntax to 3.3

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-katalyst (2.2.1)
+    rubocop-katalyst (3.0.0)
       lint_roller
       rubocop
       rubocop-capybara
