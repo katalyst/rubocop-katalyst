@@ -24,6 +24,7 @@ Layout/EmptyLineAfterMagicComment:
 Layout/ExtraSpacing:
   Description: 'Do not use unnecessary spacing.'
   Enabled: true
+  ForceEqualSignAlignment: true
 
 Layout/InitialIndentation:
   Description: >-

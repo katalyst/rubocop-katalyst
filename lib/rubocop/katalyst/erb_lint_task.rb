@@ -32,7 +32,7 @@ module RuboCop
         require "erb_lint/cli"
 
         options.unshift("--config", config.to_path, "--allow-no-files")
-        cli = ERBLint::CLI.new
+        cli    = ERBLint::CLI.new
         puts "Running erbLint #{options.join(' ')}" if verbose
         result = cli.run(options)
         abort("ERBLint failed!") unless result

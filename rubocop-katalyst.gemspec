@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
                         "package.json"]
   s.require_paths = ["lib"]
 
-  s.metadata["allowed_push_host"] = "https://rubygems.org"
+  s.metadata["allowed_push_host"]     = "https://rubygems.org"
   s.metadata["rubygems_mfa_required"] = "true"
 
   s.metadata["default_lint_roller_plugin"] = "RuboCop::Katalyst::Plugin"
