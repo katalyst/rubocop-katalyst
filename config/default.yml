@@ -32,7 +32,7 @@ AllCops:
     - tmp/**/*
     - vendor/**/*
   NewCops: enable
-  TargetRubyVersion: 3.3
+  TargetRubyVersion: 4.0
 
 Capybara:
   Enabled: true

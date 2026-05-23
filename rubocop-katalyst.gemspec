@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.summary               = "Code standards for Katalyst"
   s.homepage              = "https://github.com/katalyst/rubocop-katalyst"
   s.license               = "MIT"
-  s.required_ruby_version = ">= 3.3"
+  s.required_ruby_version = ">= 4.0"
 
   s.files         = Dir["{config,lib}/**/*",
                         "CHANGELOG.md",
