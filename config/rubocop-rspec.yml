@@ -23,6 +23,7 @@ RSpec/ExampleLength:
   Exclude:
     - spec/features/**/*
     - spec/system/**/*
+  Max: 15
 
 RSpec/MultipleExpectations:
   Exclude:
@@ -30,7 +31,7 @@ RSpec/MultipleExpectations:
     - spec/system/**/*
 
 RSpec/MultipleMemoizedHelpers:
-  Enabled: false
+  Max: 10
 
 RSpec/RepeatedExample:
   Exclude:
