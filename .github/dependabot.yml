@@ -8,11 +8,3 @@ updates:
       ruby:
         patterns:
           - "*"
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-    groups:
-      js:
-        patterns:
-          - "*"

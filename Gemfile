@@ -5,5 +5,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in rubocop-katalyst.gemspec
 gemspec
 
+gem "activesupport"
+gem "erb_lint"
 gem "rake"
 gem "rspec"

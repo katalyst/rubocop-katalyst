@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name    = "rubocop-katalyst"
-  s.version = "3.0.1"
+  s.version = "3.1.0"
   s.authors = ["Katalyst Interactive"]
   s.email   = ["developers@katalyst.com.au"]
 
@@ -11,12 +11,12 @@ Gem::Specification.new do |s|
   s.license               = "MIT"
   s.required_ruby_version = ">= 4.0"
 
-  s.files         = Dir["{config,lib}/**/*",
+  s.files         = Dir["config/**/*.yml",
+                        "lib/**/*",
                         "CHANGELOG.md",
                         "LICENSE.txt",
                         "README.md",
-                        ".erb_lint.yml",
-                        "package.json"]
+                        ".erb_lint.yml"]
   s.require_paths = ["lib"]
 
   s.metadata["allowed_push_host"]     = "https://rubygems.org"

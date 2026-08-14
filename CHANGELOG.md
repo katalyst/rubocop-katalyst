@@ -1,3 +1,10 @@
+## [3.1.0] - 2026-08-14
+
+- Run tests and linting in CI via `bin/ci`
+- Remove prettier/yarn from this repository and stop shipping `package.json`
+  in the gem — nothing consumed it, and downstream `PrettierTask` installs
+  prettier in the host project itself
+
 ## [3.0.0] - 2026-05-21
 
 - Update Ruby minimum version and syntax to 4.0

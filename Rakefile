@@ -3,7 +3,9 @@
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 
-RSpec::Core::RakeTask.new(:spec)
+RSpec::Core::RakeTask.new(:spec) do |spec|
+  spec.pattern = FileList["spec/**/*_spec.rb"]
+end
 
 require "rubocop/rake_task"
 
@@ -12,11 +14,7 @@ RuboCop::RakeTask.new
 require "rubocop/katalyst/rake_task"
 RuboCop::Katalyst::RakeTask.new
 
-task default: :lint
-
-RSpec::Core::RakeTask.new(:spec) do |spec|
-  spec.pattern = FileList["spec/**/*_spec.rb"]
-end
+task default: %i[spec lint]
 
 desc "Generate a new cop with a template"
 task :new_cop, [:cop] do |_task, args|

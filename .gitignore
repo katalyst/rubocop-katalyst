@@ -10,6 +10,3 @@
 # rspec failure tracking
 .rspec_status
 *.gem
-
-# yarn
-/node_modules

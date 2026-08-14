@@ -1,6 +1,6 @@
 # Rubocop::Katalyst
 
-[Katalyst's](https://katalyst.com.au) style guide for Ruby and Rails, in gem form. Katalyst does not at present have any custom cops; this is simply a repository for our configuration of the standard cops with Rails, Rake, Performance and RSpec extensions.
+[Katalyst's](https://katalyst.com.au) style guide for Ruby and Rails, in gem form. This is a repository for our configuration of the standard cops with Rails, Rake, Performance and RSpec extensions, plus our own custom cops.
 
 Cops are broken down by department; a file corresponding to each department can be found in the `config` directory, as well as the `default.yml` file which contains any global configuration and loads the cops. The `.rubocop.yml` file contains the configuration for this particular project as a guide for use in non-Rails environments.
 
