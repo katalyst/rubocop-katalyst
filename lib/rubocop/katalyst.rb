@@ -6,6 +6,8 @@ require "rubocop-rails"
 require "rubocop-rake"
 require "rubocop-rspec"
 
+require_relative "cop/katalyst_cops"
+
 module RuboCop
   module Katalyst
     class Plugin < LintRoller::Plugin

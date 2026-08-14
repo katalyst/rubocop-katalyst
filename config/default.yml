@@ -15,6 +15,7 @@ inherit_mode:
 inherit_from:
   - "./rubocop-bundler.yml"
   - "./rubocop-gemspec.yml"
+  - "./rubocop-koi.yml"
   - "./rubocop-layout.yml"
   - "./rubocop-lint.yml"
   - "./rubocop-metrics.yml"

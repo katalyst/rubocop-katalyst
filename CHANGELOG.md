@@ -1,5 +1,11 @@
 ## [3.1.0] - 2026-08-14
 
+- Add Koi department for custom cops specific to katalyst-koi projects,
+  configured in `config/rubocop-koi.yml` and applied to admin views via erb_lint
+- Add Koi/TableLinkHeading cop: tables in admin index/archived views and row
+  partials should link to the record once, from the column that identifies
+  it. A single record link must be marked `heading: true` (autocorrectable);
+  additional links should use `text`, or `heading: false` when intentional
 - Run tests and linting in CI via `bin/ci`
 - Remove prettier/yarn from this repository and stop shipping `package.json`
   in the gem — nothing consumed it, and downstream `PrettierTask` installs

@@ -1,0 +1,17 @@
+# Custom cops for projects built on Koi (katalyst-koi).
+#
+# These cops target admin views, which are only linted when RuboCop runs
+# through erb_lint, so they take effect via `rake erb_lint`.
+Koi:
+  Enabled: true
+
+Koi/TableLinkHeading:
+  Description: "Tables should have a single record link, rendered as the row heading."
+  Enabled: true
+  Safe: true
+  SafeAutoCorrect: false
+  VersionAdded: "3.1"
+  Include:
+    - "**/app/views/admin/**/index.html.erb"
+    - "**/app/views/admin/**/archived.html.erb"
+    - "**/app/views/admin/**/*.html+row.erb"

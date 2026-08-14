@@ -4,6 +4,8 @@
 
 Cops are broken down by department; a file corresponding to each department can be found in the `config` directory, as well as the `default.yml` file which contains any global configuration and loads the cops. The `.rubocop.yml` file contains the configuration for this particular project as a guide for use in non-Rails environments.
 
+Custom cops in the `Koi` department apply to projects built on [katalyst-koi](https://github.com/katalyst/koi). They target admin views, which plain RuboCop does not inspect — they take effect when RuboCop runs through [erb_lint](https://github.com/Shopify/erb_lint) (`rake erb_lint`), which lints the Ruby inside ERB templates. If your `.erb_lint.yml` restricts the RuboCop linter with an `only:` list, add the `Koi` cops to that list.
+
 ## Installation
 
 Add this line to your application's Gemfile:
