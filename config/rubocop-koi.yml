@@ -1,10 +1,20 @@
 # Custom cops for projects built on Koi (katalyst-koi).
-#
-# These cops target admin views, which are only linted when RuboCop runs
-# through erb_lint, so they take effect via `rake erb_lint`.
 Koi:
   Enabled: true
 
+Koi/DuplicatesAssociation:
+  Description: "Owned detail associations on content items should declare duplicates_association."
+  Enabled: true
+  Safe: true
+  SafeAutoCorrect: false
+  VersionAdded: "3.2"
+  BaseClasses:
+    - Katalyst::Content::Item
+  Include:
+    - "**/app/models/**/*.rb"
+
+# Targets admin views, which are only linted when RuboCop runs through
+# erb_lint, so it takes effect via `rake erb_lint`.
 Koi/TableLinkHeading:
   Description: "Tables should have a single record link, rendered as the row heading."
   Enabled: true

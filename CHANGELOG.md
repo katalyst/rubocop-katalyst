@@ -1,3 +1,9 @@
+## [3.2.0] - 2026-08-17
+
+- Add Koi/DuplicatesAssociation identifying Katalyst::Content items that
+  have associations but don't use the library-provided `duplicates_association`
+  helper.
+
 ## [3.1.0] - 2026-08-14
 
 - Add Koi department for custom cops specific to katalyst-koi projects,
