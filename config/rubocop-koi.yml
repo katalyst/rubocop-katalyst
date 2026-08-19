@@ -14,9 +14,7 @@ Koi/DuplicatesAssociation:
     - "**/app/models/**/*.rb"
 
 # Targets admin index views, which are only linted when RuboCop runs
-# through erb_lint, so it takes effect via `rake erb_lint`. `_table`
-# partials are included because they render index-style tables of child
-# records within a parent view.
+# through erb_lint, so it takes effect via `rake erb_lint`.
 Koi/TableAsset:
   Description: "Index tables should not render images or attachments."
   Enabled: true
@@ -27,7 +25,6 @@ Koi/TableAsset:
     - "**/app/views/admin/**/index.html.erb"
     - "**/app/views/admin/**/archived.html.erb"
     - "**/app/views/admin/**/*.html+row.erb"
-    - "**/app/views/admin/**/_table*.erb"
 
 # Targets admin views, which are only linted when RuboCop runs through
 # erb_lint, so it takes effect via `rake erb_lint`.
