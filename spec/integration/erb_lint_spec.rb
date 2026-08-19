@@ -61,6 +61,39 @@ RSpec.describe "erb_lint integration" do # rubocop:disable RSpec/DescribeClass
     expect(offenses).to be_empty
   end
 
+  it "flags attachments in an admin index view" do
+    offenses = lint("app/views/admin/pages/index.html.erb", <<~ERB)
+      <%= table_with(collection: @pages) do |row| %>
+        <% row.link :name, heading: true %>
+        <% row.attachment :image, variant: :admin_thumb %>
+      <% end %>
+    ERB
+
+    expect(offenses).to contain_exactly(a_string_matching(/Avoid attachments in index tables/))
+  end
+
+  it "flags images in an admin table partial" do
+    offenses = lint("app/views/admin/galleries/_table.html.erb", <<~ERB)
+      <%= table_with(collection: items) do |row| %>
+        <% row.cell :image do %>
+          <%= image_tag(record.image.variant(:thumb), width: 64) %>
+        <% end %>
+      <% end %>
+    ERB
+
+    expect(offenses).to contain_exactly(a_string_matching(/Avoid images in index tables/))
+  end
+
+  it "does not flag attachments in an admin show view" do
+    offenses = lint("app/views/admin/pages/show.html.erb", <<~ERB)
+      <%= summary_table_with(model: @page) do |row| %>
+        <% row.attachment :image %>
+      <% end %>
+    ERB
+
+    expect(offenses).to be_empty
+  end
+
   it "does not lint views outside the admin namespace" do
     offenses = lint("app/views/pages/index.html.erb", <<~ERB)
       <%= table_with(collection: @pages) do |row| %>

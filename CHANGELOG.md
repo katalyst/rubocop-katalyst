@@ -1,3 +1,10 @@
+## [3.3.0] - 2026-08-18
+
+- Add Koi/TableAsset cop: admin index tables (index/archived views, row and
+  table partials) should not render images or attachments. Flags
+  `row.attachment` cells and `image_tag`/`image_pack_tag` helpers as a smell,
+  without autocorrection.
+
 ## [3.2.0] - 2026-08-17
 
 - Add Koi/DuplicatesAssociation identifying Katalyst::Content items that
