@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-katalyst (3.3.1)
+    rubocop-katalyst (3.3.2)
       lint_roller
       rubocop
       rubocop-capybara
@@ -67,13 +67,9 @@ GEM
     loofah (2.25.2)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
-    mini_portile2 (2.8.9)
     minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
-    nokogiri (1.19.4)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.19.4-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-gnu)
@@ -160,11 +156,6 @@ GEM
     uri (1.1.2)
 
 PLATFORMS
-  arm64-darwin-20
-  arm64-darwin-21
-  arm64-darwin-22
-  arm64-darwin-23
-  arm64-darwin-24
   arm64-darwin-25
   x86_64-linux
 
@@ -176,4 +167,4 @@ DEPENDENCIES
   rubocop-katalyst!
 
 BUNDLED WITH
-  4.1.0.beta3
+  4.0.23

@@ -2,6 +2,7 @@
 
 require "rake"
 require "rake/tasklib"
+require "json"
 
 module RuboCop
   module Katalyst
@@ -40,8 +41,20 @@ module RuboCop
         File.join(root, ".prettierrc.json")
       end
 
+      # True when the nearest package.json (walking up from the working
+      # directory) already declares prettier. `yarn add` would rewrite that
+      # file and its lockfile, which leaves a dirty tree when a gem builds its
+      # dummy app in CI before running `rake release`.
+      def prettier_declared?
+        package_json = Pathname.new(root).ascend.map { |dir| dir.join("package.json") }.find(&:exist?)
+        return false unless package_json
+
+        json = JSON.parse(package_json.read)
+        %w[dependencies devDependencies].any? { |key| json[key].is_a?(Hash) && json[key].key?("prettier") }
+      end
+
       def install_prettier
-        yarn("add", "--dev", "prettier")
+        yarn("add", "--dev", "prettier") unless prettier_declared?
         File.write(config, <<~JSON)
           {}
         JSON
