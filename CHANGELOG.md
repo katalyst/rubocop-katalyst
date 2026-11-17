@@ -1,3 +1,10 @@
+## [3.4.0] - 2026-11-17
+
+- Add Katalyst/RenderInsideRespondTo cop: controllers should render templates
+  inside `respond_to`, so unsupported formats answer 406 instead of a 500.
+  Pending: runs in projects with `NewCops: enable`, which this gem's defaults
+  set.
+
 ## [3.3.0] - 2026-08-18
 
 - Add Koi/TableAsset cop: admin index tables (index/archived views and row
