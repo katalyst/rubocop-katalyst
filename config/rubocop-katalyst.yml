@@ -1,0 +1,15 @@
+# Custom cops for Katalyst Rails projects.
+Katalyst:
+  Enabled: true
+
+# Admin controllers sit behind sign in, so crawlers asking for other formats
+# don't reach them.
+Katalyst/RenderInsideRespondTo:
+  Description: "Render templates inside respond_to so unsupported formats answer 406, not a 500."
+  Enabled: pending
+  Safe: false
+  VersionAdded: "3.4"
+  Include:
+    - "**/app/controllers/**/*.rb"
+  Exclude:
+    - "**/app/controllers/admin/**/*"
